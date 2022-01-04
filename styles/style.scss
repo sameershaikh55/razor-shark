@@ -1,0 +1,1175 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+	font-family: Open Sans Hebrew Condensed;
+	src: url("/font/hebrew/OpenSansHebrewCondensed-Regular.ttf");
+}
+
+* {
+	padding: 0%;
+	margin: 0%;
+	box-sizing: border-box;
+}
+
+// VARIABLES START
+$color1: #fe1e007a;
+$color2: #000;
+$color3: #ff676f;
+$color4: rgba(0, 0, 0, 0.54);
+// VARIABLES END
+
+// GLOBAL START
+.montserrat {
+	font-family: "Montserrat", sans-serif;
+}
+
+.condensed {
+	font-family: "Open Sans Condensed", sans-serif;
+}
+
+.hebrew {
+	font-family: Open Sans Hebrew Condensed;
+}
+
+.poppins {
+	font-family: "Poppins", sans-serif;
+}
+
+.small_caps {
+	font-variant: small-caps;
+}
+
+.letterSpacing_1px {
+	letter-spacing: 1px;
+}
+
+html {
+	width: 100%;
+	font-size: 100%;
+	overflow-x: hidden;
+	scroll-behavior: auto !important;
+}
+
+body {
+	background-color: #000 !important;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+	html {
+		font-size: 100%;
+	}
+}
+@media screen and (max-width: 668px) {
+	html {
+		font-size: 90%;
+	}
+}
+@media screen and (max-width: 575px) {
+	html {
+		font-size: 80%;
+	}
+}
+@media screen and (max-width: 475px) {
+	html {
+		font-size: 70%;
+	}
+}
+@media screen and (max-width: 380px) {
+	html {
+		font-size: 60%;
+	}
+}
+@media screen and (max-width: 280px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.f8 {
+	font-size: 0.5rem;
+}
+
+.f10 {
+	font-size: 0.625rem;
+}
+
+.f12 {
+	font-size: 0.75rem;
+}
+
+.f14 {
+	font-size: 0.875rem;
+}
+
+.f15 {
+	font-size: 0.938rem;
+}
+
+.f16 {
+	font-size: 1rem;
+}
+
+.f18 {
+	font-size: 1.125rem;
+}
+
+.f20 {
+	font-size: 1.25rem;
+}
+
+.f22 {
+	font-size: 1.375rem;
+}
+
+.f24 {
+	font-size: 1.5rem;
+}
+
+.f26 {
+	font-size: 1.625rem;
+}
+
+.f34 {
+	font-size: 2.125rem;
+}
+
+.f30 {
+	font-size: 1.875rem;
+}
+
+.f35 {
+	font-size: 2.125rem;
+	line-height: 57px;
+}
+
+.f36 {
+	font-size: 2.25rem;
+}
+
+.f40 {
+	font-size: 2.5rem;
+}
+
+.f48 {
+	font-size: 3rem;
+}
+
+.f50 {
+	font-size: 3.125rem;
+	line-height: 65px;
+}
+
+.f64 {
+	font-size: 4rem;
+	line-height: 71px;
+}
+
+.fw400 {
+	font-weight: 400;
+}
+
+.fw500 {
+	font-weight: 500;
+}
+
+.fw600 {
+	font-weight: 600;
+}
+
+.fw700 {
+	font-weight: 700;
+}
+
+.fw800 {
+	font-weight: 800;
+}
+
+.fw900 {
+	font-weight: 900;
+}
+
+// COLORS
+.color1 {
+	color: $color1;
+}
+
+.bg_color1 {
+	// background: $color1 !important;
+}
+
+.color2 {
+	color: $color2;
+}
+
+.color3 {
+	color: $color3;
+}
+
+.color4 {
+	color: $color4;
+}
+
+.page_container {
+	max-width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ==================== SideBAR STYLING END ======================== */
+.SideBarContainer {
+	position: fixed;
+	right: 0%;
+	left: 0%;
+	bottom: 0%;
+	color: white;
+	font-size: 2.2rem;
+	background-color: #001118;
+	height: 100vh;
+	z-index: 11111;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	transition: 0.5s;
+
+	.logo {
+		position: absolute;
+		top: 1%;
+		left: 3%;
+
+		img {
+			width: 120px;
+		}
+	}
+}
+
+.SideBarContainer ul {
+	padding-left: 0rem;
+}
+
+.SideBarContainer ul li {
+	position: relative;
+	list-style: none;
+	margin-bottom: 2rem;
+	cursor: pointer;
+	padding: 0.4rem 0rem;
+	text-align: center;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		position: relative;
+		padding-bottom: 5px;
+	}
+	.activeNav::after {
+		content: "";
+		position: absolute;
+		left: 0%;
+		bottom: 0%;
+		height: 10%;
+		width: 100%;
+		background-color: #007bbc;
+		border-radius: 5px;
+	}
+}
+
+.CrossBTn {
+	position: absolute;
+	top: 7%;
+	right: 6.5%;
+	cursor: pointer;
+}
+/* ==================== SideBAR STYLING END ======================== */
+
+// HEADER START
+.header_container {
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		max-width: 22em;
+		padding: 0.1rem 1.5rem;
+		position: relative;
+		box-sizing: border-box;
+		$border: 3px;
+		color: #fff;
+		background: #000;
+		background-clip: padding-box;
+		border: solid $border transparent;
+		border-radius: 10em;
+		transition: 0.7s;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			margin: -$border;
+			border-radius: inherit;
+			background: linear-gradient(
+				to right,
+				rgba(183, 87, 87, 0.9),
+				rgba(255, 180, 180, 0.75)
+			);
+			transition: 0.7s;
+		}
+
+		&:hover {
+			z-index: 1;
+			background: linear-gradient(
+				rgba(183, 87, 87, 0.9),
+				rgba(255, 180, 180, 0.75)
+			);
+		}
+	}
+}
+// HEADER END
+
+// HERO START
+.hero_container {
+	// background: url("/images/logo.svg");
+	// width: 100%;
+	// background-repeat: no-repeat;
+	// background-position: center;
+	// background-size: contain;
+
+	.right_img {
+		position: relative;
+
+		.right_root {
+			position: absolute;
+			right: 0rem;
+			top: 2rem;
+			height: 90%;
+			width: 12px;
+			border-radius: 10px;
+			background: linear-gradient(
+				to top,
+				rgba(183, 87, 87, 0.2),
+				rgba(255, 180, 180, 1)
+			);
+			box-shadow: 1px 1px 1010px rgba(255, 180, 180, 1);
+			z-index: 1;
+		}
+	}
+
+	.right_root2 {
+		position: absolute;
+		left: 1rem;
+		top: -10rem;
+		height: 30%;
+		width: 12px;
+		border-radius: 10px;
+		background: linear-gradient(
+			to top,
+			rgba(183, 87, 87, 0.2),
+			rgba(255, 180, 180, 1)
+		);
+		box-shadow: 1px 1px 1010px rgba(255, 180, 180, 1);
+	}
+
+	.hero_text_section {
+		margin-top: -1rem;
+	}
+
+	.razor_text {
+		max-width: 800px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	h1 {
+		line-height: 58px;
+	}
+
+	.share_icons {
+		img {
+			max-width: 50px;
+		}
+	}
+
+	.hero_icons_container {
+		img {
+			max-width: 50px;
+		}
+	}
+
+	.hero_cta {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.1rem 5.5rem;
+		position: relative;
+		box-sizing: border-box;
+		$border: 3px;
+		color: #fff;
+		background: #000;
+		background-clip: padding-box;
+		border: solid $border transparent;
+		border-radius: 10em;
+		transition: 0.7s;
+		min-width: 245px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			margin: -$border;
+			border-radius: inherit;
+			background: linear-gradient(
+				to right,
+				rgba(183, 87, 87, 0.9),
+				rgba(255, 180, 180, 0.75)
+			);
+			transition: 0.7s;
+		}
+
+		&:hover {
+			z-index: 1;
+			background: linear-gradient(
+				rgba(183, 87, 87, 0.9),
+				rgba(255, 180, 180, 0.75)
+			);
+		}
+	}
+}
+// HERO END
+
+// ABOUT START
+.about_container {
+	margin-top: 8rem;
+
+	.about_inner_container {
+		// background: url("/images/aboutImg.png");
+		// background-size: contain;
+		// background-repeat: no-repeat;
+		// width: 100%;
+
+		.upper_part {
+			padding: 3.5rem 3.5rem;
+			position: relative;
+			box-sizing: border-box;
+			$border: 4px;
+			color: #fff;
+			background: #000;
+			background-clip: padding-box;
+			border: solid $border transparent;
+			border-radius: 1.5rem;
+			transition: 0.7s;
+			min-width: 245px;
+
+			p {
+				line-height: 33px;
+				letter-spacing: 0.8px;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				margin: -$border;
+				border-radius: inherit;
+				background: linear-gradient(
+					to bottom,
+					rgb(255, 197, 197),
+					rgba(183, 87, 87, 0)
+				);
+				transition: 0.7s;
+			}
+		}
+
+		.bottom_part {
+			padding: 3.5rem 3.5rem;
+			padding-top: 0rem;
+			position: relative;
+			box-sizing: border-box;
+			$border: 4px;
+			color: #fff;
+			background: #000;
+			background-clip: padding-box;
+			border: solid $border transparent;
+			border-radius: 1.5rem;
+			transition: 0.7s;
+			min-width: 245px;
+
+			p {
+				line-height: 33px;
+				letter-spacing: 0.8px;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				margin: -$border;
+				border-radius: inherit;
+				background: linear-gradient(
+					to top,
+					rgb(255, 197, 197),
+					rgba(183, 87, 87, 0)
+				);
+				transition: 0.7s;
+			}
+		}
+	}
+}
+// ABOUT END
+
+// DAO START
+.dao_container {
+	margin-top: 8rem;
+
+	.dao_shart_container {
+		background: #ffffff;
+		border: 6px solid #aca7a7;
+		border-radius: 50px;
+
+		.body_text {
+			margin-top: -3rem;
+		}
+
+		button {
+			border: 4px solid #c4c4c4;
+			border-radius: 50px;
+			height: 60px;
+			width: 60%;
+			color: #000;
+			transition: 0.6s;
+			background-color: transparent;
+
+			&:hover {
+				background-color: #c4c4c4;
+			}
+		}
+	}
+}
+// DAO END
+
+// TOKENOMICS START
+.tokenomics_container {
+	margin-top: 6rem;
+}
+// TOKENOMICS END
+
+// INVASION ROUTER START
+.invasion_route_container {
+	margin-top: 6rem;
+
+	.single-roadmap {
+		max-width: 600px;
+		min-width: 600px;
+		margin: 2.5rem 0rem;
+		background: url("/images/border.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		min-height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		ul {
+			li {
+				font-size: 1.4rem;
+			}
+		}
+
+		.number-text {
+			position: absolute;
+			top: 52%;
+			left: 55%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.single-roadmap::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #000;
+		width: 98%;
+		height: 86%;
+		z-index: -1;
+		border-radius: 1rem;
+	}
+
+	.single-roadmap:nth-child(even)::before {
+		content: url("/images/rightRoute.svg");
+		width: 80%;
+		position: absolute;
+		bottom: 16.5rem;
+		z-index: -2;
+	}
+
+	.single-roadmap:nth-child(odd)::before {
+		content: url("/images/leftRoute.svg");
+		width: 10%;
+		position: absolute;
+		bottom: 16.5rem;
+		z-index: -2;
+	}
+
+	.single-roadmap:nth-child(1)::before {
+		content: url("");
+		width: 10%;
+		position: absolute;
+		bottom: 16.5rem;
+		z-index: -2;
+	}
+}
+// INVASION ROUTER END
+
+// STEPS TO FEED START
+.steps_to_feed_container {
+	margin-top: 6rem;
+	margin-bottom: 8rem;
+
+	.steps_right_side {
+		button {
+			background: linear-gradient(
+				180deg,
+				rgba(254, 29, 0, 0.73) -45.07%,
+				rgba(21, 1, 1, 0.95) 157.75%
+			);
+			box-shadow: 0px 4px 20px rgba(255, 226, 226, 0.212);
+			border-radius: 50px;
+			height: 50px;
+			width: 214px;
+			border: none;
+		}
+	}
+
+	.connect_wallet_container {
+		background: #23242a;
+		border: 2px solid rgba(196, 196, 196, 0.38);
+		border-radius: 50px;
+
+		details.custom-select {
+			position: relative;
+			width: 120px;
+			padding: 0rem;
+			background: #191b1f;
+			border-radius: 13px;
+			height: 45px;
+
+			&:after {
+				content: url("/images/icons/whiteArrow.svg");
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: 20%;
+				right: 1.6rem;
+				z-index: 98;
+			}
+
+			summary {
+				padding: 0rem;
+				height: 45px;
+				cursor: pointer;
+				border-radius: 5px;
+				border: none;
+				list-style: none;
+				color: #fff;
+			}
+
+			summary::-webkit-details-marker {
+				display: none;
+			}
+
+			summary:after {
+				content: url("/images/ethereum.svg");
+				display: inline-block;
+				align-items: center;
+				float: left;
+				margin-top: 2px;
+			}
+
+			summary.rtl:after {
+				content: url("/images/ethereum.svg");
+				display: inline-block;
+				align-items: center;
+				float: left;
+				margin-top: 2px;
+			}
+
+			summary:focus {
+				outline: none;
+			}
+
+			ul {
+				list-style: none;
+				width: 100%;
+				background: rgb(235, 235, 235);
+				position: absolute;
+				top: calc(100% + 0.5rem);
+				left: 0;
+				padding: 0rem 0rem 0rem 0rem;
+				margin: 0;
+				box-sizing: border-box;
+				border-radius: 5px;
+				max-height: 200px;
+				overflow-y: auto;
+			}
+
+			li {
+				margin: 0;
+				padding: 0;
+				border-bottom: 1px solid #ccc;
+			}
+
+			li:first-child {
+				padding-top: 0;
+			}
+
+			li:last-child {
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+
+			/* FAKE SELECT */
+
+			summary.radios {
+				counter-reset: radios;
+			}
+
+			input[type="radio"] {
+				counter-increment: radios;
+				appearance: none;
+				display: none;
+			}
+
+			input[type="radio"]:checked {
+				display: inline;
+			}
+
+			input[type="radio"]:after {
+				content: attr(title);
+				display: inline;
+				font-size: 1rem;
+				color: #fff;
+				margin-right: 0.5rem;
+				position: absolute;
+				top: 0.6rem;
+			}
+
+			ul.list {
+				counter-reset: labels;
+			}
+
+			label {
+				width: 100%;
+				display: block;
+				cursor: pointer;
+			}
+		}
+
+		details[open] summary:before {
+			content: "";
+			display: block;
+			width: 100vw;
+			height: 100vh;
+			background: transparent;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+		details[open] {
+			z-index: 1;
+		}
+
+		details.custom-select.select-1 {
+			position: relative;
+			width: 75px;
+			padding: 0rem;
+			background: #191b1f;
+			border-radius: 13px;
+			height: 45px;
+
+			&:after {
+				content: url("/images/icons/whiteArrow.svg");
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: 20%;
+				right: 1.6rem;
+				z-index: 98;
+			}
+
+			summary {
+				padding: 0rem;
+				cursor: pointer;
+				border-radius: 5px;
+				border: none;
+				list-style: none;
+				color: #fff;
+			}
+
+			summary::-webkit-details-marker {
+				display: none;
+			}
+
+			summary:after {
+				content: url("/images/ethereum.svg");
+				display: inline-block;
+				float: left;
+				margin-top: 2px;
+			}
+
+			summary.rtl:after {
+				content: url("/images/ethereum.svg");
+				display: inline-block;
+				float: left;
+				margin-top: 2px;
+			}
+
+			summary:focus {
+				outline: none;
+			}
+
+			ul {
+				list-style: none;
+				width: 100%;
+				background: rgb(235, 235, 235);
+				position: absolute;
+				top: calc(100% + 0.5rem);
+				left: 0;
+				padding: 0rem;
+				margin: 0;
+				box-sizing: border-box;
+				border-radius: 5px;
+				max-height: 200px;
+				overflow-y: auto;
+			}
+
+			li {
+				margin: 0;
+				padding: 0;
+				border-bottom: 1px solid #ccc;
+				display: flex;
+				justify-content: center;
+			}
+
+			li:first-child {
+				padding-top: 0;
+			}
+
+			li:last-child {
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+
+			/* FAKE SELECT */
+
+			summary.radios {
+				counter-reset: radios;
+			}
+
+			input[type="radio"] {
+				counter-increment: radios;
+				appearance: none;
+				display: none;
+			}
+
+			input[type="radio"]:checked {
+				display: inline;
+			}
+
+			input[type="radio"]:after {
+				content: attr(title);
+				display: inline;
+				font-size: 1rem;
+				color: #fff;
+				margin-right: 0.5rem;
+			}
+
+			ul.list {
+				counter-reset: labels;
+			}
+
+			label {
+				width: 100%;
+				display: block;
+				cursor: pointer;
+			}
+		}
+
+		.swap_container {
+			background: #191b1f;
+			border-radius: 50px;
+		}
+
+		.swap_bottom_bg {
+			background: #212429;
+			border-radius: 20px;
+		}
+
+		button {
+			background: #1a2a42;
+			border-radius: 50px;
+			color: #588fe8;
+		}
+
+		select {
+			background: #3271e2;
+			border-radius: 10px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.dot_cont {
+			background: #191b1f;
+			border-radius: 13px;
+			padding: 10px 11px;
+		}
+	}
+}
+// STEPS TO FEED END
+
+// MEDIA START
+@media screen and (max-width: 992px) {
+	.header_container .logo_container {
+		img {
+			width: 120px;
+			height: 120px;
+		}
+	}
+	.hero_container .right_img .right_root {
+		position: absolute;
+		right: 0rem;
+		top: 12rem;
+	}
+	.hero_container .right_root2 {
+		position: absolute;
+		left: 1rem;
+		top: -47rem;
+	}
+	.f48 {
+		font-size: 2.8rem;
+	}
+	.hero_container .share_icons img {
+		max-width: 45px;
+	}
+	.f40 {
+		font-size: 2.4rem;
+	}
+	.hero_container .hero_icons_container img {
+		max-width: 45px;
+	}
+	.about_container .about_inner_container .upper_part,
+	.about_container .about_inner_container .bottom_part {
+		padding: 3.3rem 3.3rem;
+	}
+	.about_container .about_inner_container .upper_part p {
+		line-height: 28px;
+		letter-spacing: 0.7px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hero_container .right_root2 {
+		position: absolute;
+		left: 1rem;
+		top: -30rem;
+	}
+	.hero_container h1 {
+		line-height: 46px;
+	}
+	.f48 {
+		font-size: 2.4rem;
+	}
+	.hero_container .share_icons img {
+		max-width: 40px;
+	}
+	.f40 {
+		font-size: 2.2rem;
+	}
+	.hero_container .hero_icons_container img {
+		max-width: 42px;
+	}
+	.about_container .about_inner_container .upper_part,
+	.about_container .about_inner_container .bottom_part {
+		padding: 3rem 3rem;
+	}
+	.about_container .about_inner_container .upper_part p {
+		line-height: 25px;
+		letter-spacing: 0.6px;
+	}
+	.invasion_route_container .single-roadmap {
+		min-width: 100%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.hero_container .right_root2 {
+		position: absolute;
+		left: 1rem;
+		top: -30rem;
+	}
+	.hero_container h1 {
+		line-height: 28px;
+	}
+	.f48 {
+		font-size: 2.2rem;
+	}
+	.hero_container .share_icons img {
+		max-width: 35px;
+	}
+	.f40 {
+		font-size: 2rem;
+	}
+	.hero_container .hero_cta {
+		min-width: 200px;
+		height: 42px;
+	}
+	.hero_container .hero_icons_container img {
+		max-width: 40px;
+	}
+	.about_container .about_inner_container .upper_part,
+	.about_container .about_inner_container .bottom_part {
+		padding: 2.5rem 2.5rem;
+	}
+	.about_container .about_inner_container .upper_part p {
+		line-height: 22px;
+		letter-spacing: 0.6px;
+	}
+	.upper_part h1,
+	.bottom_part h1,
+	.dao_container h1,
+	.tokenomics_container h1,
+	.steps_to_feed_container h1 {
+		font-size: 3.2rem;
+	}
+	.invasion_route_container h1 {
+		line-height: 38px;
+	}
+	.token-m {
+		margin-top: -3rem;
+	}
+	.f22 {
+		font-size: 1.275rem;
+	}
+	.steps_to_feed_container .connect_wallet_container .swap_container,
+	.steps_to_feed_container .connect_wallet_container {
+		border-radius: 30px;
+	}
+	.steps_to_feed_container
+		.connect_wallet_container
+		details.custom-select.select-1:after {
+		content: url("/images/icons/whiteArrow.svg");
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 30%;
+		right: 2.6rem;
+		z-index: 98;
+	}
+	.steps_to_feed_container
+		.connect_wallet_container
+		details.custom-select
+		input[type="radio"]:after {
+		font-size: 1.5rem;
+		top: 1.4rem;
+	}
+	.steps_to_feed_container
+		.connect_wallet_container
+		details.custom-select:after {
+		content: url("/images/icons/whiteArrow.svg");
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 36%;
+		right: 2.6rem;
+		z-index: 98;
+	}
+	.steps_to_feed_container ol li {
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+	.steps_to_feed_container .steps_right_side button {
+		font-size: 2rem;
+	}
+	.invasion_route_container .single-roadmap:nth-child(odd)::before {
+		width: 7%;
+	}
+	.invasion_route_container .single-roadmap:nth-child(even)::before {
+		width: 90%;
+	}
+	.invasion_route_container .single-roadmap::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #000;
+		width: 98%;
+		height: 98%;
+		z-index: -1;
+		border-radius: 1rem;
+	}
+	.invasion_route_container .single-roadmap:nth-child(even)::before {
+		content: url("/images/mobileRouteLine.svg");
+		position: absolute;
+		left: 45%;
+		bottom: 14rem;
+		z-index: -2;
+	}
+	.invasion_route_container .single-roadmap:nth-child(odd)::before {
+		content: url("/images/mobileRouteLine.svg");
+		position: absolute;
+		bottom: 14.5rem;
+		z-index: -2;
+	}
+	.invasion_route_container .single-roadmap:nth-child(1)::before {
+		content: url("");
+	}
+	.invasion_route_container .single-roadmap::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #000;
+		width: 98%;
+		height: 90%;
+		z-index: -1;
+		border-radius: 1rem;
+	}
+	.invasion_route_container .single-roadmap {
+		min-width: 1px;
+		min-height: 100%;
+	}
+}
+// MEDIA END
