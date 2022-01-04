@@ -3,9 +3,11 @@ import { gettingData } from "../service";
 
 const Hero = () => {
 	const [image, setImage] = useState();
+	const [links, setLinks] = useState([]);
 
 	useEffect(() => {
 		gettingData("images").then((res) => setImage(res));
+		gettingData("socialLinks").then((res) => setLinks(res));
 	}, []);
 
 	return (
@@ -27,16 +29,26 @@ const Hero = () => {
 										bite!
 									</h1>
 									<div className="share_icons mb-4">
-										<img
-											src="/images/icons/telegram.svg"
-											alt=""
-											className="pointer"
-										/>
-										<img
-											className="ms-4 pointer"
-											src="/images/icons/twitter.svg"
-											alt=""
-										/>
+										<a
+											target="blank"
+											href={links.length && links[0].fields.socialLink}
+										>
+											<img
+												src="/images/icons/telegram.svg"
+												alt=""
+												className="pointer"
+											/>
+										</a>
+										<a
+											target="blank"
+											href={links.length && links[1].fields.socialLink}
+										>
+											<img
+												className="ms-4 pointer"
+												src="/images/icons/twitter.svg"
+												alt=""
+											/>
+										</a>
 									</div>
 									<h4 className="f40 mb-4">Contract: XXXXXXXXXXXX</h4>
 									<button className="mb-4 hero_cta f40 fw-bold condensed">
