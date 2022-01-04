@@ -2,72 +2,13 @@ import React, { useEffect, useState } from "react";
 import { gettingData } from "../service";
 
 const InvasionRoute = () => {
-	// const [roadmapData, setRoadmapData] = useState([]);
+	const [roadmapData, setRoadmapData] = useState([]);
+	const [image, setImage] = useState();
 
-	// useEffect(() => {
-	// 	gettingData("roadmap").then((res) => setRoadmapData(res));
-	// }, []);
-
-	// console.log(roadmapData);
-	const data = [
-		{
-			text: (
-				<ul className="list-unstyled text-white lh-sm mb-0">
-					<li>Telegram Launch</li>
-					<li>Twitter Launch</li>
-					<li>Website Release</li>
-					<li>Stealth Launch on Uniswap</li>
-					<li>Contract Verification</li>
-					<li>Liquidity Lock</li>
-					<li>Calls & Twitter Marketing</li>
-				</ul>
-			),
-		},
-		{
-			text: (
-				<ul className="list-unstyled text-white lh-sm mb-0">
-					<li>1,000 Holders</li>
-					<li>Twitter Meme Contest</li>
-					<li>Coin Gecko Listing</li>
-					<li>CoinMarketCap Listing</li>
-					<li>Multi-lingual Telegram Groups</li>
-				</ul>
-			),
-		},
-		{
-			text: (
-				<ul className="list-unstyled text-white lh-sm mb-0">
-					<li>5,000 Holders</li>
-					<li>Community Contests</li>
-					<li>Major PR Marketing</li>
-					<li>Shibaswap Listing</li>
-					<li>FEGEX Listing</li>
-				</ul>
-			),
-		},
-		{
-			text: (
-				<ul className="list-unstyled text-white lh-sm mb-0">
-					<li>10,000 Holders</li>
-					<li>Certik Audit</li>
-					<li>Shark Portfolio DApp Launch</li>
-					<li>Shark Squad DAO Launch</li>
-					<li>Whitepaper Release</li>
-				</ul>
-			),
-		},
-		{
-			text: (
-				<ul className="list-unstyled text-white lh-sm mb-0">
-					<li>50,000 Holders</li>
-					<li>Website Upgrade</li>
-					<li>Time Square Billboard Advertising</li>
-					<li>More CEX Listing</li>
-					<li>$1,000,000 Massive Buyback</li>
-				</ul>
-			),
-		},
-	];
+	useEffect(() => {
+		gettingData("roadmap").then((res) => setRoadmapData(res));
+		gettingData("images").then((res) => setImage(res));
+	}, []);
 
 	return (
 		<div id="roadmap" className="invasion_route_container montserrat">
@@ -83,8 +24,9 @@ const InvasionRoute = () => {
 								<div className="w-100">
 									<img
 										className="d-none d-md-block w-100"
-										src="/images/routeHead.svg"
-										alt=""
+										src={image && image[3].fields.image.fields.file.url}
+										alt={image && image[3].fields.title}
+										title={image && image[3].fields.title}
 									/>
 									<img
 										className="d-blocks d-md-none w-100"
@@ -95,7 +37,7 @@ const InvasionRoute = () => {
 							</div>
 
 							<div className="d-flex flex-column">
-								{data.map((item, i) => {
+								{roadmapData.map((item, i) => {
 									return (
 										<div
 											key={i}
@@ -117,7 +59,19 @@ const InvasionRoute = () => {
 															}`}</h1>
 														</div>
 													</div>
-													<div className="col-9 fw500">{item.text}</div>
+													<div className="col-9 fw500">
+														<ul className="list-unstyled text-white lh-sm mb-0">
+															{item.fields.singleRoadField.content[0].content.map(
+																(item2, i) => {
+																	return (
+																		<li key={i}>
+																			{item2.content[0].content[0].value}
+																		</li>
+																	);
+																}
+															)}
+														</ul>
+													</div>
 												</div>
 											</div>
 										</div>

@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { gettingData } from "../service";
 
 const Hero = () => {
+	const [image, setImage] = useState();
+
+	useEffect(() => {
+		gettingData("images").then((res) => setImage(res));
+	}, []);
+
 	return (
 		<div className="hero_container hebrew">
 			<div className="page_container">
@@ -56,7 +63,12 @@ const Hero = () => {
 								</div>
 								<div className="col-12 col-lg-7 mt-4 mt-md-0">
 									<div className="right_img pe-4">
-										<img className="w-100" src="/images/shark.svg" alt="" />
+										<img
+											className="w-100"
+											src={image && image[0].fields.image.fields.file.url}
+											alt={image && image[0].fields.title}
+											title={image && image[0].fields.title}
+										/>
 										<div className="right_root"></div>
 									</div>
 								</div>

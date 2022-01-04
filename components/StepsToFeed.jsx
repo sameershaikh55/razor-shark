@@ -34,7 +34,7 @@ const StepsToFeed = () => {
 											search for it on the Dextools tokens list.
 										</li>
 									</ol>
-									<div className="d-flex justify-content-center justify-md-content-start">
+									<div className="d-flex justify-content-center justify-content-md-start">
 										<button className="text-white condensed fw600 mt-3">
 											BUY NOW
 										</button>

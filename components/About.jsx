@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { gettingData } from "../service";
 
 const About = () => {
+	const [image, setImage] = useState();
+
+	useEffect(() => {
+		gettingData("images").then((res) => setImage(res));
+	}, []);
+
 	return (
 		<div id="about" className="about_container montserrat">
 			<div className="page_container">
@@ -37,8 +44,9 @@ const About = () => {
 										<div className="col-12 col-md-5">
 											<img
 												className="w-100"
-												src="/images/aboutInnerImg.svg"
-												alt=""
+												src={image && image[4].fields.image.fields.file.url}
+												alt={image && image[4].fields.title}
+												title={image && image[4].fields.title}
 											/>
 										</div>
 										<div className="col-12 col-md-7 f24 fw500">
