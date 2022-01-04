@@ -2,7 +2,7 @@ import React from "react";
 
 const Tokenomics = () => {
 	return (
-		<div className="tokenomics_container montserrat">
+		<div id="token" className="tokenomics_container montserrat">
 			<div className="page_container">
 				<div className="container-fluid">
 					<div className="row">

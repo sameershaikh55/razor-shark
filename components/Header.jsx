@@ -1,27 +1,28 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Header = ({ ClickEvent }) => {
 	const navigations = [
 		{
 			text: "HOME",
-			link: "",
+			link: "home",
 		},
 		{
 			text: "ABOUT US",
-			link: "",
+			link: "about",
 		},
 		{
 			text: "TOKENOMICS",
-			link: "",
+			link: "token",
 		},
 		{
 			text: "ROADMAP",
-			link: "",
+			link: "roadmap",
 		},
 	];
 
 	return (
-		<div className="header_container condensed">
+		<div id="home" className="header_container condensed">
 			<div className="page_container">
 				<div className="container-fluid">
 					<div className="row">
@@ -48,7 +49,16 @@ const Header = ({ ClickEvent }) => {
 													className="fw600 text-white me-5 f26 pointer"
 													key={i}
 												>
-													{item.text}
+													<Link
+														activeClass="activeNav"
+														to={item.link}
+														smooth={true}
+														duration={600}
+														spy={true}
+														offset={-500}
+													>
+														{item.text}
+													</Link>
 												</li>
 											);
 										})}

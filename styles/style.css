@@ -214,6 +214,10 @@ body {
   margin-right: auto;
 }
 
+.activeNav {
+  color: #ff676f;
+}
+
 /* ==================== SideBAR STYLING END ======================== */
 .SideBarContainer {
   position: fixed;
@@ -337,6 +341,21 @@ body {
   background: linear-gradient(rgba(183, 87, 87, 0.9), rgba(255, 180, 180, 0.75));
 }
 
+.hero_container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(47.43%, #520b0b), color-stop(107.62%, #000000));
+  background: linear-gradient(180deg, #000000 0%, #520b0b 47.43%, #000000 107.62%);
+  width: 98%;
+  height: 86%;
+  z-index: -1;
+  border-radius: 1rem;
+}
+
 .hero_container .right_img {
   position: relative;
 }
@@ -348,8 +367,8 @@ body {
   height: 90%;
   width: 12px;
   border-radius: 10px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(183, 87, 87, 0.2)), to(#ffb4b4));
-  background: linear-gradient(to top, rgba(183, 87, 87, 0.2), #ffb4b4);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(183, 87, 87, 0.2)), to(#ffc9c9));
+  background: linear-gradient(to top, rgba(183, 87, 87, 0.2), #ffc9c9);
   -webkit-box-shadow: 1px 1px 1010px #ffb4b4;
           box-shadow: 1px 1px 1010px #ffb4b4;
   z-index: 1;
@@ -362,8 +381,8 @@ body {
   height: 30%;
   width: 12px;
   border-radius: 10px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(183, 87, 87, 0.2)), to(#ffb4b4));
-  background: linear-gradient(to top, rgba(183, 87, 87, 0.2), #ffb4b4);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(183, 87, 87, 0.2)), to(#ffc3c3));
+  background: linear-gradient(to top, rgba(183, 87, 87, 0.2), #ffc3c3);
   -webkit-box-shadow: 1px 1px 1010px #ffb4b4;
           box-shadow: 1px 1px 1010px #ffb4b4;
 }
@@ -621,6 +640,12 @@ body {
   position: absolute;
   bottom: 16.5rem;
   z-index: -2;
+}
+
+.invasion_route_container .single-roadmap:nth-child(1)::after {
+  background: #fe1e007a;
+  width: 97.5%;
+  height: 89%;
 }
 
 .steps_to_feed_container {
