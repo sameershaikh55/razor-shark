@@ -50,12 +50,12 @@ const Header = ({ ClickEvent }) => {
 													key={i}
 												>
 													<Link
-														activeClass="activeNav"
+														// activeClass="activeNav"
 														to={item.link}
 														smooth={true}
 														duration={600}
 														spy={true}
-														offset={-500}
+														offset={-50}
 													>
 														{item.text}
 													</Link>

@@ -222,9 +222,10 @@ body {
 	margin-right: auto;
 }
 
-.activeNav {
-	color: $color3;
-}
+// .activeNav {
+// 	color: $color3;
+// 	text-decoration: no;
+// }
 
 /* ==================== SideBAR STYLING END ======================== */
 .SideBarContainer {
@@ -234,7 +235,12 @@ body {
 	bottom: 0%;
 	color: white;
 	font-size: 2.2rem;
-	background-color: #001118;
+	background: linear-gradient(
+		180deg,
+		#000000 0%,
+		#520b0b 47.43%,
+		#000000 107.62%
+	);
 	height: 100vh;
 	z-index: 11111;
 	display: flex;
@@ -263,7 +269,7 @@ body {
 .SideBarContainer ul li {
 	position: relative;
 	list-style: none;
-	margin-bottom: 2rem;
+	margin-bottom: 4rem;
 	cursor: pointer;
 	padding: 0.4rem 0rem;
 	text-align: center;
@@ -291,11 +297,16 @@ body {
 	top: 7%;
 	right: 6.5%;
 	cursor: pointer;
+	height: 25px;
 }
 /* ==================== SideBAR STYLING END ======================== */
 
 // HEADER START
 .header_container {
+	ul li a {
+		text-decoration: none;
+		color: #fff;
+	}
 	button {
 		display: flex;
 		align-items: center;
@@ -357,7 +368,7 @@ body {
 			#000000 107.62%
 		);
 		width: 98%;
-		height: 86%;
+		height: 100%;
 		z-index: -1;
 		border-radius: 1rem;
 	}
@@ -434,7 +445,7 @@ body {
 		box-sizing: border-box;
 		$border: 3px;
 		color: #fff;
-		background: #000;
+		background: rgba(0, 0, 0, 0.7);
 		background-clip: padding-box;
 		border: solid $border transparent;
 		border-radius: 10em;

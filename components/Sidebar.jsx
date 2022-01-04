@@ -1,23 +1,23 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 const Sidebar = ({ isOpen, ClickEvent }) => {
 	const navigations = [
 		{
 			text: "HOME",
-			link: "",
+			link: "home",
 		},
 		{
 			text: "ABOUT US",
-			link: "",
+			link: "about",
 		},
 		{
 			text: "TOKENOMICS",
-			link: "",
+			link: "token",
 		},
 		{
 			text: "ROADMAP",
-			link: "",
+			link: "roadmap",
 		},
 	];
 
@@ -31,7 +31,7 @@ const Sidebar = ({ isOpen, ClickEvent }) => {
 			className="SideBarContainer"
 		>
 			<div className="logo">
-				<Link href="/">
+				<Link to="home">
 					<img src="/images/logo.svg" alt="logo" />
 				</Link>
 			</div>
@@ -45,7 +45,17 @@ const Sidebar = ({ isOpen, ClickEvent }) => {
 				{navigations.map((item, i) => {
 					return (
 						<li className="fw600 text-white f28 pointer" key={i}>
-							{item.text}
+							<Link
+								// activeClass="activeNav"
+								onClick={ClickEvent}
+								to={item.link}
+								smooth={true}
+								duration={600}
+								spy={true}
+								offset={-50}
+							>
+								{item.text}
+							</Link>
 						</li>
 					);
 				})}

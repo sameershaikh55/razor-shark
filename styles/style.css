@@ -214,10 +214,6 @@ body {
   margin-right: auto;
 }
 
-.activeNav {
-  color: #ff676f;
-}
-
 /* ==================== SideBAR STYLING END ======================== */
 .SideBarContainer {
   position: fixed;
@@ -226,7 +222,8 @@ body {
   bottom: 0%;
   color: white;
   font-size: 2.2rem;
-  background-color: #001118;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(47.43%, #520b0b), color-stop(107.62%, #000000));
+  background: linear-gradient(180deg, #000000 0%, #520b0b 47.43%, #000000 107.62%);
   height: 100vh;
   z-index: 11111;
   display: -webkit-box;
@@ -262,7 +259,7 @@ body {
 .SideBarContainer ul li {
   position: relative;
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   cursor: pointer;
   padding: 0.4rem 0rem;
   text-align: center;
@@ -291,9 +288,15 @@ body {
   top: 7%;
   right: 6.5%;
   cursor: pointer;
+  height: 25px;
 }
 
 /* ==================== SideBAR STYLING END ======================== */
+.header_container ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .header_container button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,7 +354,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(47.43%, #520b0b), color-stop(107.62%, #000000));
   background: linear-gradient(180deg, #000000 0%, #520b0b 47.43%, #000000 107.62%);
   width: 98%;
-  height: 86%;
+  height: 100%;
   z-index: -1;
   border-radius: 1rem;
 }
@@ -426,7 +429,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
-  background: #000;
+  background: rgba(0, 0, 0, 0.7);
   background-clip: padding-box;
   border: solid 3px transparent;
   border-radius: 10em;
