@@ -55,6 +55,16 @@ html {
 body {
 	background-color: #000 !important;
 	overflow: hidden;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+	&::-webkit-scrollbar-track {
+		background: rgba(0, 0, 0, 0.479);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $color3;
+	}
 }
 
 @media screen and (max-width: 992px) {
@@ -675,7 +685,7 @@ body {
 	}
 
 	.single-roadmap:nth-child(1)::after {
-		background: $color1;
+		background: rgba(107, 23, 23, 0.753);
 		width: 97.5%;
 		height: 89%;
 	}

@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { gettingData } from "../service";
 
 const InvasionRoute = () => {
+	// const [roadmapData, setRoadmapData] = useState([]);
+
+	// useEffect(() => {
+	// 	gettingData("roadmap").then((res) => setRoadmapData(res));
+	// }, []);
+
+	// console.log(roadmapData);
 	const data = [
 		{
 			text: (
@@ -29,35 +37,33 @@ const InvasionRoute = () => {
 		{
 			text: (
 				<ul className="list-unstyled text-white lh-sm mb-0">
-					<li>Telegram Launch</li>
-					<li>Twitter Launch</li>
-					<li>Website Release</li>
-					<li>Stealth Launch on Uniswap</li>
-					<li>Contract Verification</li>
-					<li>Liquidity Lock</li>
-					<li>Calls & Twitter Marketing</li>
+					<li>5,000 Holders</li>
+					<li>Community Contests</li>
+					<li>Major PR Marketing</li>
+					<li>Shibaswap Listing</li>
+					<li>FEGEX Listing</li>
 				</ul>
 			),
 		},
 		{
 			text: (
 				<ul className="list-unstyled text-white lh-sm mb-0">
-					<li>1,000 Holders</li>
-					<li>Twitter Meme Contest</li>
-					<li>Coin Gecko Listing</li>
-					<li>CoinMarketCap Listing</li>
-					<li>Multi-lingual Telegram Groups</li>
+					<li>10,000 Holders</li>
+					<li>Certik Audit</li>
+					<li>Shark Portfolio DApp Launch</li>
+					<li>Shark Squad DAO Launch</li>
+					<li>Whitepaper Release</li>
 				</ul>
 			),
 		},
 		{
 			text: (
 				<ul className="list-unstyled text-white lh-sm mb-0">
-					<li>1,000 Holders</li>
-					<li>Twitter Meme Contest</li>
-					<li>Coin Gecko Listing</li>
-					<li>CoinMarketCap Listing</li>
-					<li>Multi-lingual Telegram Groups</li>
+					<li>50,000 Holders</li>
+					<li>Website Upgrade</li>
+					<li>Time Square Billboard Advertising</li>
+					<li>More CEX Listing</li>
+					<li>$1,000,000 Massive Buyback</li>
 				</ul>
 			),
 		},

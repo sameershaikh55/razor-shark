@@ -49,6 +49,18 @@ body {
   overflow: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.479);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ff676f;
+}
+
 @media screen and (max-width: 992px) {
   html {
     font-size: 100%;
@@ -646,7 +658,7 @@ body {
 }
 
 .invasion_route_container .single-roadmap:nth-child(1)::after {
-  background: #fe1e007a;
+  background: rgba(107, 23, 23, 0.753);
   width: 97.5%;
   height: 89%;
 }
