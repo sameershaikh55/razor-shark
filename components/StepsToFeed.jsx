@@ -42,155 +42,20 @@ const StepsToFeed = () => {
 								</div>
 								<div className="col-md-7 mt-5 mt-md-0">
 									<div className="row">
-										<div className="col-12 col-sm-8 col-lg-10 mx-auto mx-md-auto ms-auto">
-											<div className="connect_wallet_container p-5">
-												<div className="d-flex align-items-center justify-content-between mb-5">
-													<img src="/images/horse.svg" alt="" />
-													<div className="d-flex align-items-center">
-														<details className="custom-select select-1">
-															<summary className="radios">
-																<input
-																	type="radio"
-																	name="item"
-																	id="default"
-																	title=""
-																	checked
-																/>
-																<input
-																	type="radio"
-																	name="item"
-																	id=""
-																	title=""
-																/>
-																<input
-																	type="radio"
-																	name="item"
-																	id=""
-																	title=""
-																/>
-															</summary>
-															<ul className="list">
-																<li>
-																	<label
-																		className="d-flex align-items-center justify-content-between w-100 ltr"
-																		htmlFor=""
-																	>
-																		<a
-																			className="text-decoration-none text-dark d-flex align-items-center justify-content-between w-100"
-																			href=""
-																		>
-																			<img src="/images/ethereum.svg" alt="" />
-																		</a>
-																	</label>
-																</li>
-																<li>
-																	<label
-																		className="d-flex align-items-center justify-content-between w-100 ltr"
-																		htmlFor="English"
-																	>
-																		<a
-																			className="text-decoration-none text-dark d-flex align-items-center justify-content-between w-100"
-																			href=""
-																		>
-																			<img src="/images/ethereum.svg" alt="" />
-																		</a>
-																	</label>
-																</li>
-															</ul>
-														</details>
-														<div className="dot_cont ms-2">
-															<img src="/images/dots.svg" alt="" />
-														</div>
-													</div>
-												</div>
-
-												<div className="swap_container p-4">
-													<div className="d-flex justify-content-between mb-3">
-														<p className="mb-0 text-white f24 fw-light">Swap</p>
-														<img src="/images/settings.svg" alt="" />
-													</div>
-
-													<div className="swap_bottom_bg d-flex justify-content-between align-items-center p-3 mb-3">
-														<h1 className="mb-0 text-white fw-light">0.0</h1>
-														<details className="custom-select montserrat">
-															<summary className="radios">
-																<input
-																	type="radio"
-																	name="item"
-																	id="default"
-																	title="ETH"
-																	checked
-																/>
-																<input
-																	type="radio"
-																	name="item"
-																	id="ETH"
-																	title="ETH"
-																/>
-																<input
-																	type="radio"
-																	name="item"
-																	id="ETH"
-																	title="ETH"
-																/>
-															</summary>
-															<ul className="list">
-																<li>
-																	<label
-																		className="d-flex align-items-center justify-content-between w-100 ltr"
-																		htmlFor=""
-																	>
-																		<a
-																			className="text-decoration-none text-dark d-flex align-items-center justify-content-start w-100"
-																			href=""
-																		>
-																			<img
-																				src="/images/ethereum.svg"
-																				alt=""
-																				className="mt-2"
-																			/>
-																			<div>ETH</div>
-																		</a>
-																	</label>
-																</li>
-																<li>
-																	<label
-																		className="d-flex align-items-center justify-content-between w-100 ltr"
-																		htmlFor="English"
-																	>
-																		<a
-																			className="text-decoration-none text-dark d-flex align-items-center justify-content-start w-100"
-																			href=""
-																		>
-																			<img
-																				src="/images/ethereum.svg"
-																				alt=""
-																				className="mt-2"
-																			/>
-																			<div>ETH</div>
-																		</a>
-																	</label>
-																</li>
-															</ul>
-														</details>
-													</div>
-													<div className="swap_bottom_bg d-flex justify-content-between align-items-center p-3">
-														<h1 className="mb-0 text-white fw-light">0.0</h1>
-														<select
-															name=""
-															id=""
-															className="text-white px-2 py-1 montserrat"
-														>
-															<option value="Select Token">Select Token</option>
-															<option value="Select Token">Select Token</option>
-														</select>
-													</div>
-												</div>
-
-												<button className="w-100 mt-4 py-3 border-0 fw-bold f24 condensed">
-													Connect Wallet
-												</button>
-											</div>
+										<div className="col-12 col-sm-8 mx-auto mx-md-auto ms-auto">
+											<iframe
+												src="https://app.uniswap.org/#/swap?exactField=input&exactAmount=10&inputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f"
+												height="660px"
+												width="100%"
+												style={{
+													border: "0",
+													margin: "0 auto",
+													marginBottom: "5rem",
+													display: "block",
+													borderRadius: "10px",
+													maxHeight: "500px",
+												}}
+											/>
 										</div>
 									</div>
 								</div>
